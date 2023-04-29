@@ -13,7 +13,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "BROWSER=none react-scripts start",
+    "sass": "node-sass src/styles -o src/styles --watch",
+    "dev": "concurrently \"npm run start\" \"npm run sass\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -39,6 +41,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "concurrently": "^8.0.1",
+    "gh-pages": "^5.0.0",
+    "node-sass": "^7.0.3"
   }
 }
