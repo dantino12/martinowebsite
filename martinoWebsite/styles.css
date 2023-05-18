@@ -1,0 +1,144 @@
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('path/to/your-font-files/ProximaNova-Regular.woff2') format('woff2'),
+         url('path/to/your-font-files/ProximaNova-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Proxima Nova Condensed Light', Arial, sans-serif;
+  }
+  
+  .parallax-container {
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  
+  .parallax-image {
+    width: 40%;
+    height: auto;
+    transition: transform 0.2s;
+    object-fit: cover; 
+  }
+  
+  .navigation {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+  }
+  
+  .nav-button {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #000;
+    transition: transform 0.4s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .nav-button {
+    font-family: 'Proxima Nova', Arial, sans-serif;
+    display: block;
+    position: relative;
+    padding: 15px 20px;
+    border: 1px solid #ccc;
+    background-color: transparent;
+    color: #000;
+    transition: transform 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .nav-button:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+  }
+  
+  .nav-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background-color: rgb(255, 255, 255); /* Adjust the ripple color and opacity as desired */
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.4s;
+    pointer-events: none;
+  }
+  
+  .nav-button:active::after {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+  }
+  
+  
+
+  .header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    margin: 0;
+    padding: 10px;
+    font-size: 24px; 
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+  
+  .header a {
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .header:hover {
+    color: #fff;
+  }
+
+  .textbox-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px; 
+  }
+  
+  .textbox-title {
+    margin: 0;
+    padding: 10px;
+  }
+  
+  .textbox {
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .textbox-text {
+    margin: 0;
+    text-align: left;
+    color: #888;
+  }
